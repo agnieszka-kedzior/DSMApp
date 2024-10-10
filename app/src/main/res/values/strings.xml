@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DSM</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="assigned">Assigned</string>
+    <string name="created">Created</string>
+    <string name="history">History</string>
+    <string name="create_task">Create Task</string>
+    <string name="cancel">Cancel</string>
+    <string name="next">Next</string>
+    <string name="new_task">New task</string>
+    <string name="new_task_1">New task - Step 1:</string>
+    <string name="new_task_2">New task - Step 2:</string>
+    <string name="sign_in">Sign In</string>
+    <string name="image">Image</string>
+    <string name="textInfoStep1">Select one image:</string>
+    <string name="my">Patients</string>
+    <string name="access">Access</string>
+    <string name="received">Received</string>
+    <string name="select_details">Select task details:</string>
+    <string name="back">Back</string>
+</resources>

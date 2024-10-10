@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:clickable="true"
+    tools:context=".ActivityMain"
+    android:focusable="true">
+
+
+    <ImageView
+        android:id="@+id/myPicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/imageNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/colorWhite"
+        android:rotation="180"
+        android:tint="@color/colorGrey"
+        app:backgroundTint="@color/colorLightGrey"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/imageBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/colorWhite"
+        android:tint="@color/colorGrey"
+        app:backgroundTint="@color/colorLightGrey"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ProgressBar
+        android:id="@+id/loadingPicture"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:scaleType="centerInside"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/frameNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/layEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/design_default_color_primary_dark"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutLin"
+                android:orientation="horizontal"
+                android:backgroundTint="@color/colorPrimaryDark">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/cancelEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentTop="true"
+                        android:backgroundTint="@color/design_default_color_primary_dark"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ic_close_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/frame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="F#"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorWhite"
+                        android:layout_toRightOf="@+id/cancelEdit" />
+
+                    <EditText
+                        android:id="@+id/textFrameDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:layout_margin="5dp"
+                        android:layout_toLeftOf="@+id/saveFrameComment"
+                        android:layout_toRightOf="@+id/frame"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/saveFrameComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/design_default_color_primary_dark"
+                        android:contentDescription="save comment"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ic_send_black_24dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/design_default_color_primary_dark"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutLinReview"
+            android:orientation="horizontal"
+            android:backgroundTint="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/taskInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:backgroundTint="@color/design_default_color_primary_dark"
+                    app:srcCompat="@drawable/ic_assignment_black_24dp" />
+
+                <TextView
+                    android:id="@+id/frameNr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="F#"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_toRightOf="@+id/taskInfo" />
+
+                <TextView
+                    android:id="@+id/textFrameDescText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_toLeftOf="@+id/editComment"
+                    android:layout_toRightOf="@+id/frameNr"
+                    />
+
+                <ImageButton
+                    android:id="@+id/editComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@color/design_default_color_primary_dark"
+                    android:contentDescription="save comment"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_edit_black_24dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

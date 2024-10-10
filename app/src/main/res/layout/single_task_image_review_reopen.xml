@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    tools:context=".ActivityMain"
+    android:focusable="true">
+
+    <EditText
+        android:id="@+id/textReopen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_blue"
+        android:layout_margin="15dp"
+        android:layout_toLeftOf="@+id/saveFrameComment"
+        android:layout_toRightOf="@+id/frame"
+        />
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textReopen"
+        android:backgroundTint="@color/design_default_color_primary_dark"
+        android:textColor="@color/colorWhite"
+        android:clickable="false"
+        android:focusable="true"
+        android:text="REOPEN" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textReopen"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="CANCEL" />
+
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_assigned_tasks"
+        android:title="@string/assigned"/>
+
+    <item
+        android:id="@+id/nav_created_tasks"
+        android:title="@string/created"/>
+
+    <item
+        android:id="@+id/nav_history_tasks"
+        android:title="@string/history"/>
+
+</menu>
